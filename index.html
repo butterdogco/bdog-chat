@@ -1,54 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ButterDog Chat (beta)</title>
-        <link rel="shortcut icon" href="Untitled design.png">
-        <style>
-            @keyframes thing {
-                0% {
-                    opacity: 1;
-                }
-                75% {
-                    opacity: 0.75;
-                }
-                100% {
-                    opacity: 0;
-                }
+
+<head>
+    <title>ButterDog Chat (beta)</title>
+    <link rel="shortcut icon" href="Untitled design.png">
+    <style>
+        @keyframes thing {
+            0% {
+                opacity: 1;
             }
-            body {
-                margin: 0;
-                font-family: 'Roboto', sans-serif;
-                background-color: white;
+
+            75% {
+                opacity: 0.75;
             }
-            iframe {
-                width: 100vw;
-                height: 100vh;
-                outline: none;
-                border: none;
-                margin: none;
-                transition: 0.2s ease-in-out;
+
+            100% {
+                opacity: 0;
             }
-            .load {
-                width: 100vw;
-                height: 100vh;
-                margin: none;
-                justify-content: center;
-                vertical-align: center;
-                animation: thing 1 ease-in-out;
-            }
-            .load .logo {
-                width: 200px;
-                height: 200px;
-                outline: none;
-                border: none;
-                border-radius: 12px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="load">
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+        }
+
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            outline: none;
+            border: none;
+            margin: none;
+            transition: 0.2s ease-in-out;
+        }
+
+        .load {
+            width: 100vw;
+            height: 100vh;
+            margin: none;
+            justify-content: center;
+            vertical-align: center;
+            animation: thing 1s ease-in-out;
+        }
+
+        .load .logo {
+            width: 200px;
+            height: 200px;
+            outline: none;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .load .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="load">
+        <div class="center">
             <img class="logo" src="Untitled design.png">
         </div>
-        <iframe src="https://deadsimplechat.com/RY42Kf4rn">if you see this message why the hell is your browser form 1998</iframe>
-    </body>
+    </div>
+    <iframe src="https://deadsimplechat.com/RY42Kf4rn">if you see this message why the hell is your browser from
+        1998</iframe>
+</body>
+
 </html>
