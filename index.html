@@ -8,14 +8,20 @@
         @keyframes thing {
             0% {
                 opacity: 1;
+                display: block;
             }
 
             75% {
                 opacity: 0.75;
+                display: block;
             }
 
+            99% {
+                display: block;
+            }
             100% {
                 opacity: 0;
+                display: none;
             }
         }
 
@@ -23,6 +29,8 @@
             margin: 0;
             font-family: 'Roboto', sans-serif;
             background-color: white;
+            height: 100vh;
+            overflow: hidden;
         }
 
         iframe {
@@ -41,6 +49,7 @@
             justify-content: center;
             vertical-align: center;
             animation: thing 1s ease-in-out;
+            display: none;
         }
 
         .load .logo {
