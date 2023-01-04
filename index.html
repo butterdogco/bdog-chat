@@ -5,6 +5,15 @@
     <title>Dashboard</title>
     <link type="image/png" rel="shortcut icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico" />
     <style>
+    
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
         
         body {
             margin: 0;
@@ -12,14 +21,51 @@
             background-color: white;
             height: 100vh;
             overflow: hidden;
+            animation: fadeIn 0.8s ease;
         }
 
         iframe {
             width: 100vw;
-            height: 102vh;
+            height: 102.5vh;
             outline: none;
             border: none;
             margin: none;
+        }
+        
+        .terms {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 30%;
+          width: 30%;
+          text-align: center;
+          color: white;
+          background-color: gray;
+          border-radius: 12px;
+          padding: 40px;
+          font-weight: bold;
+          font-size: 35px;
+        }
+        
+        .terms a {
+          color: rgb(160, 160, 255) !important;
+        }
+        
+        #accept {
+          padding: 10px;
+          border: none;
+          cursor: pointer;
+          font-size: 20px;
+          border-radius: 12px;
+          background-color: darkgray;
+          color: white;
+          font-weight: bold;
+          transition: 0.2s ease;
+        }
+        
+        #accept:hover {
+          background-color: lightgray;
         }
 
     </style>
@@ -27,7 +73,15 @@
 
 <body>
     <iframe src="https://deadsimplechat.com/RY42Kf4rn"></iframe>
-    <p>by using bdog chat you accept the <a href="https://search.butterdogco.com/tos">terms of use</a></p>
+    <div id="terms" class="terms">
+      <p>by using bdog chat you accept the <a href="https://search.butterdogco.com/tos" target="_blank">terms of use</a></p>
+      <button id="accept" onclick="accept()">Accept</button>
+    </div>
+    <script>
+      function accept() {
+        document.getElementById('terms').style.display = "none";
+      }
+    </script>
 </body>
 
 </html>
