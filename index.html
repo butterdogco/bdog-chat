@@ -24,12 +24,13 @@
             animation: fadeIn 0.8s ease;
         }
 
-        iframe {
+        #site {
             width: 100vw;
             height: 102.5vh;
             outline: none;
             border: none;
             margin: none;
+            filter: brightness(50%);
         }
         
         .terms {
@@ -45,7 +46,7 @@
           border-radius: 12px;
           padding: 40px;
           font-weight: bold;
-          font-size: 35px;
+          font-size: 32px;
         }
         
         .terms a {
@@ -72,14 +73,15 @@
 </head>
 
 <body>
-    <iframe src="https://deadsimplechat.com/RY42Kf4rn"></iframe>
+    <iframe id="site" src="https://deadsimplechat.com/RY42Kf4rn"></iframe>
     <div id="terms" class="terms">
-      <p>by using bdog chat you accept the <a href="https://search.butterdogco.com/tos" target="_blank">terms of use</a></p>
+      <p>By using ButterDog Chat you accept the <a href="https://search.butterdogco.com/tos" target="_blank">terms of use</a> and the <a target="_blank" href="https://search.butterdogco.com/pp">privacy policy</a></p>
       <button id="accept" onclick="accept()">Accept</button>
     </div>
     <script>
       function accept() {
         document.getElementById('terms').style.display = "none";
+        document.getElementById('site').style.filter = "brightness(100%)"
       }
     </script>
 </body>
